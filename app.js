@@ -1,9 +1,13 @@
 const express = require('express');
+const authRoutes = require('./server/routes/auth-routes');
 const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname + '/client'));
+
+//s set up routes
+app.use(express.static(__dirname + '/public'));
+app.use('/auth', authRoutes);
 
 // set up view engine
 app.set('view engine', 'ejs');
