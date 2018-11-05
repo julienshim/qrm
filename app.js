@@ -9,30 +9,28 @@ const passport = require('passport');
 
 const app = express();
 
-
-//s set up routes
-app.use(express.static(__dirname + '/public'));
-app.use('/auth', authRoutes);
-
-// set up view engine
+// Set up view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/server/views'));
 
-app.user(cookieSession({
+app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
     keys: [keys.session.cookieKey]
 }));
 
-// initialize passport
+// Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// connect to mongodb 
+// Connect to MongoDB
 mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true }, ()=> {
     console.log('Connected to mongodb');
 });
 
-//create home route
+// Set Up Routes
+app.use(express.static(__dirname + '/public'));
+app.use('/auth', authRoutes);
+
 app.get('/', (req, res) => {
     res.render('home');
 });
