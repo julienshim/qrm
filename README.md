@@ -32,8 +32,8 @@ DB_HOSTNAME=database_host_name(address)
 
 Order of app.use should be as follows:
 
-1.cookieParser
-2.session
-3.passport.initialize
-4.passport.session
-5.app.router
+1. cookieParser
+2. session
+3. passport.initialize
+4. passport.session
+5. app.router
