@@ -13,6 +13,12 @@ module.exports = {
         callbackURL: '/#/#/#',
         clientID: '#-#.apps.googleusercontent.com',
         clientSecret: '#-#'
+    },
+    mongodb: {
+        dbURI: 'mongodb://hostname/database_name'
+    },
+    session: {
+        cookieKey: '###'
     }
 };
 ```
