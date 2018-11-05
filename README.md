@@ -6,7 +6,8 @@
 
 ### Configuration
 
-``` server/config/keys.js
+**server/config/keys.js**
+```
 module.exports = {
     google: {
         callbackURL: '/#/#/#',
@@ -15,8 +16,8 @@ module.exports = {
     }
 };
 ```
-
-``` process.env
+**process.env**
+``` 
 DB_USERNAME=database_username
 DB_PASSWORD=database_password
 DB_NAME=database_name
