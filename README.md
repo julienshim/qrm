@@ -1,8 +1,6 @@
 # QRM
 
-### Description
-
-
+QRM is the working title for a customer relationship management app with MongoDB, Freshbooks API, Google Calendar API, and Google OAuth integration.
 
 ### Configuration
 
